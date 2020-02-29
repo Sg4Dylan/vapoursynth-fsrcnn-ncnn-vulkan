@@ -11,9 +11,9 @@ install Visual Studio Community 2019
 
 build vs-fsrcnn-vulkan
 
-> mkdir build
-> cd build
-> cmake -G"NMake Makefiles" ..
+> mkdir build  
+> cd build  
+> cmake -G"NMake Makefiles" ..  
 > nmake
 
 ## Usage
