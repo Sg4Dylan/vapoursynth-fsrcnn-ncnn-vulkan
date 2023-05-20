@@ -2,8 +2,8 @@
 #include <wchar.h>
 
 // VapourSynth Library
-#include "VapourSynth.h"
-#include "VSHelper.h"
+#include <vapoursynth/VapourSynth.h>
+#include <vapoursynth/VSHelper.h>
 
 // Image decode and encode
 #include <opencv2/core.hpp>
@@ -12,9 +12,9 @@
 #include <opencv2/core/hal/interface.h>
 
 // NCNN Library
-#include "platform.h"
-#include "net.h"
-#include "gpu.h"
+#include <ncnn/platform.h>
+#include <ncnn/net.h>
+#include <ncnn/gpu.h>
 
 // FSRCNN Model
 #include "fsrcnn.id.h"
@@ -133,7 +133,7 @@ void new_to_gray(const ncnn::Mat& m, float* gray)
 	int remain = size;
 	for (; remain > 0; remain--)
 	{
-		*gray = min(max(*ptr, 0), 255);
+		*gray = std::min(std::max(*ptr, 0.0f), 255.0f);
 		gray++;
 		ptr++;
 	}

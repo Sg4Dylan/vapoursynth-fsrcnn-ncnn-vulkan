@@ -1,6 +1,6 @@
 // VapourSynth Library
-#include "VapourSynth.h"
-#include "VSHelper.h"
+#include <vapoursynth/VapourSynth.h>
+#include <vapoursynth/VSHelper.h>
 
 // FSRCNN
 #include "fsrcnn.h"
